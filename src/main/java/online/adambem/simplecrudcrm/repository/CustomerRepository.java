@@ -1,12 +1,10 @@
 package online.adambem.simplecrudcrm.repository;
 
-import online.adambem.simplecrudcrm.entity.Employee;
+import online.adambem.simplecrudcrm.entity.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
 }

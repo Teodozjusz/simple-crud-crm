@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Are you sure?</title>
+</head>
+<body>
+<h3 th:inline="text">Are you sure you want to delete [[${customer.firstName}]] [[${customer.lastName}]]?</h3>
+
+<a th:href="@{/customers/delete(id=${customer.id})}">Yes</a>
+<a th:href="@{/customers/list}">No</a>
+
+</body>
+</html>

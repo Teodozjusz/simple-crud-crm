@@ -3,7 +3,7 @@ package online.adambem.simplecrudcrm.entity;
 import javax.persistence.*;
 
 @Entity
-public class Employee {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,10 +18,10 @@ public class Employee {
     @Column(name = "email")
     private String email;
 
-    public Employee() {
+    public Customer() {
     }
 
-    public Employee(String firstName, String lastName, String email) {
+    public Customer(String firstName, String lastName, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -57,5 +57,15 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
